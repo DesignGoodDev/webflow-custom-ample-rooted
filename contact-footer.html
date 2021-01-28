@@ -1,0 +1,25 @@
+<script src="https://cdn.jsdelivr.net/npm/select2/dist/js/select2.min.js"></script>
+<script>
+  $(document).ready(function() {
+  	$('.therapist').each(function() {
+    	var s = $(this).text();
+      $('.select--therapists').prepend('<option value="'+s+'">'+s+'</option>');
+    });
+    $('.select--single').select2({
+      minimumResultsForSearch: -1,
+      placeholder: "Select an option",
+    });
+    $('.select--multiple').select2({
+      minimumResultsForSearch: -1,
+      placeholder: "Select at least one option",
+    });
+  });
+  $('input[type="text"],input[type="email"],textarea').on({
+    focusin: function() {
+      $(this).prev('.label.hidden').css("opacity", "1");
+    },
+    focusout: function() {
+      $(this).prev('.label.hidden').css("opacity", "0");
+    }
+  });
+</script>
