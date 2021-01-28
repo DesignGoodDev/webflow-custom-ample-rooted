@@ -1,0 +1,165 @@
+<style>
+p {
+  margin-bottom: 35px;
+}
+
+p + p {
+  margin-top: -18px;
+}
+
+a {
+  color: inherit;
+}
+
+p a {
+  font-weight: 600;
+}
+
+.w-richtext ul {
+  padding-left: 20px;
+}
+
+.w-richtext li::marker {
+  content: '+ ';
+}
+
+.w-richtext.rte--no-bullets ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.w-richtext.rte--no-bullets li::marker {
+  content: '';
+}
+
+.button-group .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* match to .button */
+.rte--buttons p:last-of-type > a:first-child:last-child {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 1.4rem;
+  color: #fcfbf9;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: tenez, sans-serif;
+  line-height: 1.125;
+  letter-spacing: 4.2px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #a9582f;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  transition: transform 200ms ease;
+}
+
+.rte--buttons p:last-of-type > a:first-child:last-child:hover {
+  color: #fcfbf9;
+  transform: translate(0, -4px);
+}
+
+input,
+textarea {
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+details .description {
+  padding-top: 10px;
+  padding-left: 38px;
+}
+
+summary {
+  position: relative;
+  padding-left: 38px;
+  cursor: pointer;
+}
+
+summary::before {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  display: inline-block;
+  width: 29px;
+  height: 32px;
+  color: #a9582f;
+  font-size: 36px;
+  font-family: tenez, sans-serif;
+  line-height: 32px;
+  letter-spacing: normal;
+  text-align: center;
+  content: '+';
+}
+
+details[open] summary::before {
+  content: '-';
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:focus {
+  outline: none;
+}
+
+summary:hover h3,
+summary:focus h3,
+summary:active h3 {
+  text-decoration: underline;
+}
+
+.hyphens {
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  /* word-break: break-all; */
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  /* min chars before a hyphen */
+  -webkit-hyphenate-limit-before: 6;
+  /* min chars after a hyphen */
+  -webkit-hyphenate-limit-after: 3;
+  /* max # consecutive lines ending in hyphens */
+  -webkit-hyphenate-limit-lines: 2;
+  -moz-hyphenate-limit-chars: 6 3 2;
+  -webkit-hyphenate-limit-chars: 6 3 2;
+  -ms-hyphenate-limit-chars: 6 3 2;
+  hyphenate-limit-chars: 6 3 2;
+}
+
+@media (max-width: 479px) {
+  .xs-hyphens h1,
+  .xs-hyphens h2 {
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    -webkit-hyphenate-limit-before: 6;
+    -webkit-hyphenate-limit-after: 3;
+    -webkit-hyphenate-limit-lines: 2;
+    -moz-hyphenate-limit-chars: 6 3 2;
+    -webkit-hyphenate-limit-chars: 6 3 2;
+    -ms-hyphenate-limit-chars: 6 3 2;
+    hyphenate-limit-chars: 6 3 2;
+  }
+}
+</style>

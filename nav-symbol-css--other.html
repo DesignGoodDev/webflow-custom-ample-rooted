@@ -1,0 +1,114 @@
+<style>
+  .image--parallax {
+    height: 120%;
+    height: calc(100% + 300px);
+  }
+
+  .w-dyn-empty {
+    height: 0;
+    background-color: transparent;
+  }
+
+  .therapy-type:last-of-type .hr--rose {
+    display: none;
+  }
+
+  .blog-categories::after {
+    content: '| ';
+  }
+
+  .blog-categories:last-child::after {
+    content: '';
+  }
+
+  .social-share__links a {
+    margin-right: 28px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .event:nth-of-type(4n + 1) {
+    color: #fcfbf9;
+    background-color: #c2813e;
+  }
+
+  .event:nth-of-type(4n + 2) {
+    color: #c2813e;
+  }
+
+  .event:nth-of-type(4n + 3) {
+    color: #fcfbf9;
+    background-color: #d38c66;
+  }
+
+  .event:nth-of-type(4n + 4) {
+    color: #fcfbf9;
+    background-color: #a9582f;
+  }
+
+  .event:nth-of-type(4n + 4) .rte--buttons p:last-of-type > a:first-child:last-child {
+    background-color: #d38c66;
+  }
+
+  .event .container::before {
+    position: absolute;
+    right: -108px;
+    bottom: 0;
+    width: 128px;
+    height: 170px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    content: '';
+  }
+
+  .event:nth-of-type(4n + 1) .container::before {
+    background-image: url('https://uploads-ssl.webflow.com/5f9832096b91264cd247b532/5fa5b210bfbadbf531bfcc02_graphic-flower-clay.svg');
+    background-size: 80%;
+  }
+
+  .event:nth-of-type(4n + 2) .container::before {
+    background-image: url('https://uploads-ssl.webflow.com/5f9832096b91264cd247b532/5fa5b7cc7606afb0379ef509_graphic-empathy-clay.svg');
+  }
+
+  .event:nth-of-type(4n + 3) .container::before {
+    background-image: url('https://uploads-ssl.webflow.com/5f9832096b91264cd247b532/5fa5b2107a78a157bc6eef27_graphic-connection-clay.svg');
+    background-size: 75%;
+  }
+
+  .event:nth-of-type(4n + 4) .container::before {
+    background-image: url('https://uploads-ssl.webflow.com/5f9832096b91264cd247b532/5fff2588357dfbfc2cbec23f_graphic-spray-white.svg');
+  }
+
+  @media (max-width: 991px) {
+    .event .container::before {
+      right: -80px;
+      bottom: -4rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .event {
+      padding-bottom: 6rem;
+    }
+    .event .container::before {
+      right: -40px;
+    }
+  }
+
+  .team__pronouns::before {
+    content: '(';
+  }
+  .team__pronouns::after {
+    content: ')';
+  }
+  .image--inset-border::after {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    width: calc(100% - 52px);
+    height: calc(100% - 52px);
+    border: 2px solid #c2813e;
+    content: '';
+  }
+</style>

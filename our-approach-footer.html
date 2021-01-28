@@ -1,0 +1,29 @@
+<script>
+  ready( function() {
+    wrapPractices();
+  });
+
+  function ready( callback ) {
+    if (document.readyState != 'loading') callback();
+    else if (document.addEventListener) document.addEventListener('DOMContentLoaded', callback);
+    else document.attachEvent('onreadystatechange', function() {
+      if (document.readyState == 'complete') callback();
+    });
+  }
+
+  function wrapPractices() {
+    const practiceItems = document.querySelectorAll('.practice-item');
+    for ( let i = 0; i < practiceItems.length; i++ ) {
+      const details = document.createElement('details');
+      const summary = document.createElement('summary');
+
+      const name = practiceItems[i].querySelectorAll('.name')[0];
+      const description = practiceItems[i].querySelectorAll('.description')[0];
+
+      summary.appendChild(name);
+      details.appendChild(summary);
+      details.appendChild(description);
+      practiceItems[i].appendChild(details);
+    }
+  }
+</script>
